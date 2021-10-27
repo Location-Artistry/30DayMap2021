@@ -41,32 +41,48 @@
   <div class="w3-light-grey w3-padding-large w3-padding-large " id="introText">
     <h2 class="w3-center">#30DayMapChallenge</h2>
     <h3 class="w3-center">November 2021 Map Challenge</h3>
-    <hr>
+    
+    <h5>October 26</h5>
     <p>The smell of autumn is in the air in Michigan, and that can only mean the annual 30 Day Map Challenge is near!</p>
     <h4>What is the 30 Day Map Challenge?</h4>
-    <p>Each days presents a map challenge focused on a different spatial feature or topic.<br>  
+    <p>Each day presents a map challenge focused on a different spatial feature or topic.<br>  
        Cartographers are invited to create a map each day with the tools of their choice centered around that day’s theme. 
        Daily themes involve working with a specific type of vector data, colors, or feature type.  The categories for this year are
        shown below, so get going with some crazy cartography!</p>
-    <a href="https://www.gislounge.com/november-map-challenge/" target="_blank" class="w3-hover-text-green">GIS Lounge 30 Day Map Challenge</a>
-    <p>I am a Geospatial Developer and Scientist, I specialize in Hydrology and Natural Resource analysis, and am looking to deploy Data Science, 
+    <a href="https://www.gislounge.com/november-map-challenge/" target="_blank" class="w3-hover-text-green">GIS Lounge 30 Day Map Challenge</a><br>
+    <p>Hi: I'm a Geospatial Developer and Scientist, I specialize in Hydrology and Natural Resource analysis, and am looking to deploy Data Science, 
        Remote Sensing, and Deep Learning to solve complex ecological and social problems.  Also I enjoy forest hikes, the Great Lakes, permaculture and playing gypsy jazz guitar.</p>
     <a href="https://github.com/Location-Artistry" target="_blank" class="w3-hover-text-green">gitHub</a> - 
     <a href="https://www.linkedin.com/in/eric-kerney/" target="_blank" class="w3-hover-text-green">linkedIn</a>
-    
+    <img src="images/30dmpc_2021.png" alt="30DayMapGraphic" class="w3-image w3-margin-top" width="1000" height="500">
   </div>   
-  <img src="images/30dmpc_2021.png" alt="Ocean" class="w3-image w3-margin-top" width="1000" height="500">
   
+  <br>
   <div class="w3-light-grey w3-padding-large w3-padding-large " id="introText">
-    <h3 class="w3-center">#30DayMapChallenge</h3>
+    <h2 class="w3-center">Proposed Approach for 2021</h2>
+    <h3 class="w3-center">#30DayMapChallenge - October 27</h3>
     <hr>
-    <p>A recent 3D map using Mapbox.GL, ObservableHQ, and various data layers in downtown Detroit</p>
+    <p>30 Maps in 30 days requires some type of a plan to execute in such a short window....<br>
+       What sort of a theme would be novel?  What would be interesting?  What could provide a path to deliver a map each day?
+       Why note a new city each day?  Using the largest cities in the US by population, and discovering open data portal for each city.<br><br> 
+       This could also involve Jupyter Notebooks, and Python, and Scraping, sounds like an exciting data science excursion!
+       I began by scraping wikipedia for the list of largest cities with the Beautiful Soup Library, parsed into a dataframe,
+       cleaned the text columns, and reduced the list from 326 to the top 30.<br><br>
+       Next I automated the search query for each city and the text: "Open Data," saving the top three results into a new dataframe.
+       Export to CSV and we've got something to start with!<br><br>
+       Watch this scraping/searching automation occur in front of your eyes below, along with some cool jazz.<br>
+       Gist also shown below video.       
+    </p>
     
+    <iframe width="100%" height="520"  src="https://www.youtube.com/embed/MRjWbnaQieY?controls=0&loop=1&list=PLc8klS_xTIqHVmBxBj3i6QC7vDqiESzAo&autoplay=1&modestbranding=1&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    
+    <script src="https://gist.github.com/Location-Artistry/7a0132f937b5ef050048694358b2dd37.js"></script>    
   </div>
   
-  <img src="images/finalMapViz.png" alt="Ocean" class="w3-image w3-margin-top" width="1000" height="500">
-  <img src="images/paPyGMTcol.png" alt="Ocean II" class="w3-image w3-margin-top" width="1000" height="500">
-
+  <img src="images/finalMapViz.png" alt="detroitDowntown" class="w3-image w3-margin-top" width="1000" height="500">
+  <img src="images/paPyGMTcol.png" alt="PtGMTairMonitors" class="w3-image w3-margin-top" width="1000" height="500">
+  
   <!-- Contact -->
   <div class="w3-light-grey w3-padding-large w3-padding-32 w3-margin-top" id="contact">
     
