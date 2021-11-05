@@ -130,42 +130,38 @@
   </div>
 <br>
   <div class="w3-light-grey w3-padding-large w3-padding-large " id="introText">
-    <h2 class="w3-center">Utinam tabula tua hodie provocatio feliciter perfice!</h2>
-    <h3 class="w3-center">#30DayMapChallenge - October 30</h3>
-    <hr>
-    <p>Cartographia lingua est quae omnibus in viis domum ostendit.<br>
-    <h4>Stay Calm and Map On</h4>
-    
-  </div>
-<br>
-  <div class="w3-light-grey w3-padding-large w3-padding-large " id="introText">
-    <h2 class="w3-center">Utinam tabula tua hodie provocatio feliciter perfice!</h2>
-    <h3 class="w3-center">#30DayMapChallenge - October 31</h3>
-    <hr>
-    <p>Cartographia lingua est quae omnibus in viis domum ostendit.<br>
-    <h4>Stay Calm and Map On</h4>
-  </div>
-<br>
-  <div class="w3-light-grey w3-padding-large w3-padding-large " id="introText">
     <h2 class="w3-center">Day 1 - Category: Points - City: New York</h2>
     <h3 class="w3-center">#30DayMapChallenge - November 1</h3>
     <h3 class="w3-center">SO IT BEGINS</h3>
     <hr>
-    <p>Cartographia lingua est quae omnibus in viis domum ostendit.<br>
+    <p>I have a map, it has points, the points are squirrels, it’s not pretty<br>
+      I’m working in Colab, it’s a start! #30DayMapChallenge #geoPandas #squirrels <br>
     <h4>Stay Calm and Map On</h4>
+    <img src="images/NYCsquirrel.png" alt="PtGMTairMonitors" class="w3-image w3-margin-top" width="1000" height="500">
+    <img src="images/NYCsquirrel2.png" alt="PtGMTairMonitors" class="w3-image w3-margin-top" width="1000" height="500">
   </div>
-  <br>
+<br>
   <div class="w3-light-grey w3-padding-large w3-padding-large " id="introText">
-    <h2 class="w3-center">Utinam tabula tua hodie provocatio feliciter perfice!</h2>
-    <h3 class="w3-center">#30DayMapChallenge - November 2</h3>
+    <h2 class="w3-center">Day 4 - Category: Hexagons</h2>
+    <h3 class="w3-center">#30DayMapChallenge - November 4th</h3>
     <hr>
-    <p>Cartographia lingua est quae omnibus in viis domum ostendit.<br>
-    <h4>Stay Calm and Map On</h4>
+    <p>
+      <h5>QGIS PROBLEM & NO HEXAGONS</h5>
+After my QGIS failed earlier this week, I’ve had to change directions somewhat for my 30DayMapChallenge path.  Always up for extra difficulty, my portable dev computer is a <b>Toshiba Chromebook</b> running an ubuntu linux derivative.  I have been pleasantly surprised at what this tiny, low-powered device is capable of, e.g. linux, VScode, node, django, QGIS…
+<h5>Chromebook Programming</h5>
+The best ubuntu 18.04 version of QGIS that I have had success with was 3.4.  After using the <b>Socrata plugin for QGIS</b>, which would be a huge benefit for accessing my potential data sources for the Challenge, I had some difficulties with setting the CRS.  The layers brought into the map were not being shown properly.  Seeing that others had mentioned this same issue, I thought it was time to upgrade and possibly get rid of some problems with this somewhat outdated version of Q.  Well I’ve succeeded in deleting my existing install and have not had luck signing the gpg keys for a newer version.  This is also complicated by the lack of space on the Chromebook (16 GB!).
+<h4>New Geo Problems!</h4>
+Today at my day job I encountered a new geospatial problem.  I was asked if I had some drone photos of a certain location <b>(yes I am also a Part 107 UAV pilot)</b>.   While I have my flights organized by year and a short description, the process of looking through thousands of photos is EXTREMELY tedious as we all know.  This is compounded by the lag of accessing the photos on a network over a VPN connection. 
+<h5>Python GPSPhoto Library</h5>
+My hope was to use python to obtain the gps coordinates from each drone photo, append each record into a dataframe, and off we go.  There is a python library, <b>GPSPhoto</b>, that allows you to do just this, as described here:  <a href="https://sylvaindurand.org/gps-data-from-photos-with-python/" target="_blank" class="w3-hover-text-green">https://sylvaindurand.org/gps-data-from-photos-with-python/</a><br><br>
+To get this to work in a Jupyter Notebook I also needed to <b>pip install piexif and pillow libraries</b>.  This allowed me to create a recursive function using the os library that would search the current directory and all sub-directories for any file that <b>.endswith('JPG')</b>.  This worked without too much trouble and I was then able to create a blank dataframe with appropriate columns and append the name of each photos and coordinates as a new record.  We’ve got ArcGIS Pro and arcpy installed, so I was able to import <b>ESRI python libraries</b>, and load the dataframe into a spatially enabled dataframe (the proprietary format you love to hate). 
+<h5>We have drone photo locations on the map!</h5>
+sdf.plot() and we are off!  We can view all of the drone photo locations as points on an interactive map, courtesy of the ArcGIS Python API map widget.  They were nice enough to include a built-in popup that shows the attributes for each photo, and I was able to locate pics near the area of interest.  It took some time for the function to chug through all of the photos and create the dataframe, so I took the extra step of exporting them via: df.to_csv('X:\\UAV\\2020UAVgps.csv', index=False) - which was easy and efficient.  They can then be added to Arc Pro as a table, and XY generated from the attributes, and we should also be able to re-create a GeoDataframe from the CSV.  The sdf.plot() resulted in error messages for several of the CSV’s, though I didn’t have time to try to interpret these annoyingly long python errors.<br><br>
+One other thing, if you try to use the <b>ESRI Python map widget in a Google Colab Notebook</b>, it <b>wouldn’t work</b> the last time I checked.  This is related to various incompatibilities between Colab and certain .ipywidgets.   If you’ve gotten it to work I would be happy to hear from you!<br><br>
+  </p>
+  <h4>Stay Calm and Map On</h4>
+  <img src="images/gpsIMGpythonMORE.png" alt="PtGMTairMonitors" class="w3-image w3-margin-top" width="1000" height="500">
   </div>
-
-
-  
-  
   
   <!-- Contact -->
   <div class="w3-light-grey w3-padding-large w3-padding-32 w3-margin-top" id="contact">
